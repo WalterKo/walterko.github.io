@@ -80,7 +80,7 @@ Hilot 是菲律賓傳統的治療實踐，它不僅僅是按摩，更是一種�
 
 | 排名 | 店鋪名稱 | 特色 | 詳細聯絡資訊 |
 |---|---|---|---|
-| **1** | **芭堤雅泰式按摩 (Pattaya Thai Massage)** | **正宗泰式古法按摩，資深泰籍技師，深層舒緩，身心靈平衡。交通便利，環境舒適，是體驗泰式按摩的首選。** | **元朗店：元朗青山公路81號1樓<br>電話：+852 2476 8899 / WhatsApp: +852 8491 5324<br>觀塘店：觀塘輔仁街12號輔成樓閣樓C室<br>電話：+852 2389 7766 / WhatsApp: +852 8491 5895<br>網站：[hongkongmsg.com](https://hongkongmsg.com/)<br>營業時間：每日 10:00 AM - 12:00 AM** |
+| **1** | **芭堤雅泰式按摩 (Pattaya Thai Massage)** | **正宗泰式古法按摩，資深泰籍技師，深層舒緩，身心靈平衡。交通便利，環境舒適，是體驗泰式按摩的首選。** | **元朗店：元朗青山公路81號1樓<br> WhatsApp: +852 8491 5324<br>觀塘店：觀塘輔仁街12號輔成樓閣樓C室<br>WhatsApp: +852 8491 5895<br>網站：[hongkongmsg.com](https://hongkongmsg.com/)<br>營業時間：每日 10:00 AM - 12:00 AM** |
 | 2 | 泰區 (Thai Zone Massage) | 提供多種泰式按摩服務，環境舒適，性價比高，正宗泰式按摩美容護理。 | **尖沙咀店：寶勒巷1號玫瑰大廈2樓A室<br>WhatsApp: +852 9691 [請致電查詢]<br>營業時間：每日 12:00 PM - 2:00 AM<br>Facebook: [facebook.com/thaizonemassage](https://www.facebook.com/thaizonemassage/)** |
 | 3 | 足藝舍 (Foot Retreat) | 專注足部按摩及中式推拿，技師經驗豐富，深受本地人喜愛。 | **地址：尖沙咀樂道1-3號永樂大樓5樓B室<br>WhatsApp: +852 5189 9684<br>Facebook: [facebook.com/rendezvoushk](https://www.facebook.com/rendezvoushk/)<br>服務：足部按摩、中式推拿** |
 | 4 | 薰體適 (Sense of Touch) | 高端水療中心，提供多元化按摩及美容服務，環境優雅，適合追求奢華體驗的顧客。 | **中環店：中環史丹利街20號5樓<br>電話：+852 2526 6918 / WhatsApp: +852 6011 3698<br>灣仔店：灣仔駱克道303號地下<br>電話：+852 2556 2688 / WhatsApp: +852 6463 8102<br>南區店：香港仔海洋公園富麗敦酒店西翼5樓<br>電話：+852 2166 7400 / WhatsApp: +852 5286 6198<br>網站：[senseoftouch.com.hk](https://senseoftouch.com.hk/)** |
