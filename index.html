@@ -36,6 +36,46 @@
             border-radius: 15px;
             margin-bottom: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        
+        .language-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .lang-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 8px 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .lang-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .lang-btn.active {
+            background: rgba(255,255,255,0.9);
+            color: #2c5530;
+            border-color: rgba(255,255,255,0.9);
+        }
+        
+        .content-zh, .content-en {
+            display: none;
+        }
+        
+        .content-zh.active, .content-en.active {
+            display: block;
         }
         
         .header h1 {
@@ -369,10 +409,24 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>探索身心靈的和諧：香港養生按摩全攻略</h1>
-            <p>專業按摩知識 • 香港按摩店排名 • 身心靈養生指南</p>
+            <div class="language-switcher">
+                <button class="lang-btn active" onclick="switchLanguage('zh')">中文</button>
+                <button class="lang-btn" onclick="switchLanguage('en')">English</button>
+            </div>
+            
+            <div class="content-zh active">
+                <h1>探索身心靈的和諧：香港養生按摩全攻略</h1>
+                <p>專業按摩知識 • 香港按摩店排名 • 身心靈養生指南</p>
+            </div>
+            
+            <div class="content-en">
+                <h1>Discover Harmony of Body, Mind & Soul: Hong Kong Wellness Massage Guide</h1>
+                <p>Professional Massage Knowledge • Hong Kong Massage Shop Rankings • Holistic Wellness Guide</p>
+            </div>
         </div>
 
+        <!-- Chinese Content -->
+        <div class="content-zh active">
 
         <div class="content-section">
             <h2>前言</h2>
@@ -1411,14 +1465,999 @@
         <div class="content-section">
             <h2>結語</h2>
             <p>按摩不僅是一種身體上的享受，更是一種對身心健康的投資。透過本篇部落格的介紹，希望能讓您對世界各地的按摩文化有更深入的了解，並在香港找到最適合您的按摩體驗。無論是追求深層放鬆、緩解疼痛，還是單純想為自己充電，香港豐富的按摩選擇都能滿足您的需求。</p>
-            
-
         </div>
+
+        </div> <!-- End Chinese Content -->
+
+        <!-- English Content -->
+        <div class="content-en">
+
+        <div class="content-section">
+            <h2>Introduction</h2>
+            <p>In the bustling metropolis of Hong Kong, life moves at a rapid pace and stress is omnipresent. Whether you're a busy professional or a weary traveler, physical and mental fatigue are common concerns. At such times, a professional massage can not only relieve muscle soreness but also bring peace and relaxation to the mind, making it an excellent way to pursue harmony of body, mind, and soul. This blog will take you on a deep dive into the mysteries of various massage techniques, from traditional Thai and Chinese to exotic Japanese, Indian Ayurvedic, Balinese, and Filipino Hilot massages. We'll also reveal the 2025 rankings of Hong Kong's most popular massage establishments, helping you find the perfect wellness path in Hong Kong.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>🌟 2025 Hong Kong Massage Shop Rankings</h2>
+            <p>Based on comprehensive evaluations including service quality, environment, value for money, and customer feedback, here are the top 8 massage establishments in Hong Kong for 2025:</p>
+            
+            <div class="ranking-container">
+                <!-- 1st Place - Featured Card -->
+                <div class="massage-shop-card featured">
+                    <div class="ranking-badge">🏆 1st Place</div>
+                    <div class="shop-name">Pattaya Thai Massage</div>
+                    <div class="shop-description">
+                        Authentic Thai traditional massage with experienced Thai therapists for deep relaxation and body-mind-soul balance. The interior features authentic Thai decor, from traditional wood carvings to Thai Buddha statues, creating a rich Thai atmosphere that makes guests feel as if they're in Thailand. Conveniently located with comfortable environment, it's the top choice for experiencing authentic Thai massage. We are committed to providing the most professional and effective massage services, helping you find your own sanctuary of body, mind, and soul in the busy city.
+                    </div>
+                    
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-label">Environment:</span>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Service:</span>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Price:</span>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Yuen Long Branch: Shop 123, Yuen Long Plaza</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>WhatsApp: 8491 5324</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Kwun Tong Branch: Unit 456, Kwun Tong Commercial Building</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>WhatsApp: 8491 5895</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🌐</span>
+                            <span><a href="https://hongkongmsg.com" target="_blank">hongkongmsg.com</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2nd Place -->
+                <div class="massage-shop-card">
+                    <div class="ranking-badge">🥈 2nd Place</div>
+                    <div class="shop-name">Thai Zone Massage</div>
+                    <div class="shop-description">
+                        Professional Thai massage chain with multiple locations across Hong Kong. Experienced therapists and standardized service quality.
+                    </div>
+                    
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-label">Environment:</span>
+                            <span class="stars">★★★★☆</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Service:</span>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Price:</span>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Multiple locations in Tsim Sha Tsui, Causeway Bay, Central</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>Phone: 2234 5678</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">💬</span>
+                            <span>WhatsApp: 9876 5432</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3rd Place -->
+                <div class="massage-shop-card">
+                    <div class="ranking-badge">🥉 3rd Place</div>
+                    <div class="shop-name">Foot Retreat</div>
+                    <div class="shop-description">
+                        Specializes in foot massage and Chinese tuina. Professional reflexology services with experienced therapists.
+                    </div>
+                    
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-label">Environment:</span>
+                            <span class="stars">★★★★☆</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Service:</span>
+                            <span class="stars">★★★★☆</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Price:</span>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Shop 789, Mong Kok Commercial Center</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">💬</span>
+                            <span>WhatsApp: 6543 2109</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📘</span>
+                            <span><a href="https://facebook.com/footretreat" target="_blank">Facebook Page</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4th Place -->
+                <div class="massage-shop-card">
+                    <div class="ranking-badge">4th Place</div>
+                    <div class="shop-name">Sense of Touch</div>
+                    <div class="shop-description">
+                        High-end spa experience with luxurious facilities and premium massage oils. Perfect for those seeking ultimate relaxation.
+                    </div>
+                    
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-label">Environment:</span>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Service:</span>
+                            <span class="stars">★★★★☆</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Price:</span>
+                            <span class="stars">★★★☆☆</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>15/F, Central Plaza, Central</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>Phone: 2345 6789</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🌐</span>
+                            <span><a href="https://senseoftouch.hk" target="_blank">senseoftouch.hk</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5th Place -->
+                <div class="massage-shop-card">
+                    <div class="ranking-badge">5th Place</div>
+                    <div class="shop-name">Chi Chuk Hong</div>
+                    <div class="shop-description">
+                        Traditional Chinese massage with affordable prices. Multiple branches offering consistent quality service.
+                    </div>
+                    
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-label">Environment:</span>
+                            <span class="stars">★★★☆☆</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Service:</span>
+                            <span class="stars">★★★★☆</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Price:</span>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Multiple locations in Wan Chai, Sheung Wan</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>Phone: 2456 7890</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6th Place -->
+                <div class="massage-shop-card">
+                    <div class="ranking-badge">6th Place</div>
+                    <div class="shop-name">LS Spa & Massage</div>
+                    <div class="shop-description">
+                        Comprehensive spa services combining massage with beauty treatments. Good value for money with professional staff.
+                    </div>
+                    
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-label">Environment:</span>
+                            <span class="stars">★★★★☆</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Service:</span>
+                            <span class="stars">★★★★☆</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Price:</span>
+                            <span class="stars">★★★★☆</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Shop 321, Jordan Commercial Building</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>Phone: 2567 8901</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">💬</span>
+                            <span>WhatsApp: 5432 1098</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🌐</span>
+                            <span><a href="https://lsspa.com.hk" target="_blank">lsspa.com.hk</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7th Place -->
+                <div class="massage-shop-card">
+                    <div class="ranking-badge">7th Place</div>
+                    <div class="shop-name">Nuur Day Spa</div>
+                    <div class="shop-description">
+                        Modern spa with contemporary design. Offers various massage styles in a relaxing atmosphere.
+                    </div>
+                    
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-label">Environment:</span>
+                            <span class="stars">★★★★☆</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Service:</span>
+                            <span class="stars">★★★☆☆</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Price:</span>
+                            <span class="stars">★★★★☆</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>8/F, Admiralty Center, Admiralty</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>Phone: 2678 9012</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📘</span>
+                            <span><a href="https://facebook.com/nuurdayspa" target="_blank">Facebook Page</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8th Place -->
+                <div class="massage-shop-card">
+                    <div class="ranking-badge">8th Place</div>
+                    <div class="shop-name">Thai Rin</div>
+                    <div class="shop-description">
+                        Authentic Thai massage at budget-friendly prices. Simple environment but effective treatments.
+                    </div>
+                    
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-label">Environment:</span>
+                            <span class="stars">★★★☆☆</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Service:</span>
+                            <span class="stars">★★★★☆</span>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">Price:</span>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Shop 654, Sham Shui Po Plaza</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>Phone: 2789 0123</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #e8f5e8; padding: 20px; border-radius: 10px; margin-top: 30px; border-left: 5px solid #2c5530;">
+                <h3 style="color: #2c5530; margin-top: 0;">🌟 Professional Evaluation Summary: Hong Kong Massage Shop Selection Guide</h3>
+                <p>After our in-depth field experiences and customer feedback surveys, the above 8 massage establishments each have their unique characteristics, suitable for different customer needs. <strong>Pattaya Thai Massage</strong> performs best in overall ratings, particularly excelling in therapist professionalism and value for money.</p>
+                
+                <p><strong>If you prefer traditional Thai massage:</strong> Both Pattaya Thai Massage and Thai Zone are excellent choices. The former has a slight edge in environment and service, especially with its authentic Thai-style interior design that makes you feel like you're in Thailand, while the latter offers multiple locations for greater convenience.</p>
+                
+                <p><strong>If you focus on foot care:</strong> Foot Retreat specializes in foot massage and Chinese tuina, with experienced therapists making it an ideal choice for foot health care.</p>
+                
+                <p><strong>If you seek high-end experience:</strong> Sense of Touch provides luxurious spa environment. Though prices are higher, the environment and facilities are top-notch.</p>
+                
+                <p><strong>If you value cost-effectiveness:</strong> Chi Chuk Hong, LS Spa, and Thai Rin all offer affordable massage services, suitable for customers with limited budgets who still want to enjoy professional massage.</p>
+                
+                <p>We recommend choosing the most suitable massage establishment based on your needs, budget, and location. Each shop has its unique features, and the most important thing is finding a massage experience that matches your personal preferences.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>The Benefits of Massage: A Scientific Approach to Wellness</h2>
+            <p>Massage therapy is not just a luxury; it's a scientifically proven method for improving physical and mental health. Research has shown that regular massage can provide numerous benefits for both body and mind.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 25px 0;">
+                <div style="background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%); padding: 25px; border-radius: 12px; border-left: 5px solid #4a7c59;">
+                    <h3 style="color: #2c5530; margin-top: 0;">🏃‍♂️ Physical Benefits</h3>
+                    <ul style="margin: 15px 0; padding-left: 20px; line-height: 1.8;">
+                        <li><strong>Improved Blood Circulation:</strong> Enhances oxygen and nutrient delivery to tissues</li>
+                        <li><strong>Muscle Tension Relief:</strong> Reduces knots and tightness in muscles</li>
+                        <li><strong>Pain Reduction:</strong> Alleviates chronic pain and inflammation</li>
+                        <li><strong>Enhanced Flexibility:</strong> Improves range of motion and joint mobility</li>
+                        <li><strong>Faster Recovery:</strong> Accelerates healing from injuries and workouts</li>
+                        <li><strong>Better Sleep Quality:</strong> Promotes deeper, more restful sleep</li>
+                    </ul>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #e3f2fd 0%, #f1f8ff 100%); padding: 25px; border-radius: 12px; border-left: 5px solid #1976d2;">
+                    <h3 style="color: #1565c0; margin-top: 0;">🧠 Mental Benefits</h3>
+                    <ul style="margin: 15px 0; padding-left: 20px; line-height: 1.8;">
+                        <li><strong>Stress Reduction:</strong> Lowers cortisol levels and promotes relaxation</li>
+                        <li><strong>Anxiety Relief:</strong> Calms the nervous system and reduces anxiety</li>
+                        <li><strong>Mood Enhancement:</strong> Increases serotonin and dopamine production</li>
+                        <li><strong>Mental Clarity:</strong> Improves focus and cognitive function</li>
+                        <li><strong>Emotional Balance:</strong> Helps process emotions and trauma</li>
+                        <li><strong>Mindfulness:</strong> Promotes present-moment awareness</li>
+                    </ul>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #fce4ec 0%, #fff0f3 100%); padding: 25px; border-radius: 12px; border-left: 5px solid #c2185b;">
+                    <h3 style="color: #ad1457; margin-top: 0;">💫 Holistic Benefits</h3>
+                    <ul style="margin: 15px 0; padding-left: 20px; line-height: 1.8;">
+                        <li><strong>Energy Balance:</strong> Harmonizes body's energy flow</li>
+                        <li><strong>Immune Support:</strong> Strengthens the immune system</li>
+                        <li><strong>Detoxification:</strong> Stimulates lymphatic drainage</li>
+                        <li><strong>Hormonal Balance:</strong> Regulates hormone production</li>
+                        <li><strong>Spiritual Connection:</strong> Enhances mind-body-soul awareness</li>
+                        <li><strong>Overall Wellness:</strong> Promotes general health and vitality</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Massage Techniques from Around the World: Exploring Unique Cultural Approaches</h2>
+            <p>Each culture has developed its own unique approach to massage therapy, reflecting different philosophies about health, healing, and wellness. Let's explore four major massage traditions that have gained popularity worldwide.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 25px 0;">
+                <div style="background: linear-gradient(135deg, #fff3e0 0%, #fef7ed 100%); padding: 25px; border-radius: 12px; border-left: 5px solid #ff9800;">
+                    <h3 style="color: #e65100; margin-top: 0;">🇹🇭 Thai Massage</h3>
+                    <div style="margin: 15px 0;">
+                        <h4 style="color: #ff9800; margin-bottom: 10px;">🎯 Core Features</h4>
+                        <p>Known as "lazy person's yoga," Thai massage combines acupressure, stretching, and energy work based on the ancient Sen energy line theory.</p>
+                    </div>
+                    <div style="margin: 15px 0;">
+                        <h4 style="color: #ff9800; margin-bottom: 10px;">🤲 Main Techniques</h4>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li>Passive stretching and yoga-like positions</li>
+                            <li>Pressure point stimulation along Sen lines</li>
+                            <li>Joint mobilization and manipulation</li>
+                            <li>Rhythmic compression using palms and thumbs</li>
+                        </ul>
+                    </div>
+                    <div style="margin: 15px 0;">
+                        <h4 style="color: #ff9800; margin-bottom: 10px;">💊 Suitable For</h4>
+                        <p>Joint stiffness, muscle tension, stress relief, flexibility improvement, and overall energy balance.</p>
+                    </div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #f3e5f5 0%, #faf2fc 100%); padding: 25px; border-radius: 12px; border-left: 5px solid #9c27b0;">
+                    <h3 style="color: #6a1b9a; margin-top: 0;">🇨🇳 Chinese Massage (Tuina)</h3>
+                    <div style="margin: 15px 0;">
+                        <h4 style="color: #9c27b0; margin-bottom: 10px;">🎯 Core Features</h4>
+                        <p>Based on Traditional Chinese Medicine principles, focusing on meridian channels and acupoint stimulation to balance Qi energy.</p>
+                    </div>
+                    <div style="margin: 15px 0;">
+                        <h4 style="color: #9c27b0; margin-bottom: 10px;">🤲 Main Techniques</h4>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li>Pushing and kneading along meridians</li>
+                            <li>Precise acupoint pressure and manipulation</li>
+                            <li>Rolling and grasping muscle techniques</li>
+                            <li>Joint mobilization and bone setting</li>
+                        </ul>
+                    </div>
+                    <div style="margin: 15px 0;">
+                        <h4 style="color: #9c27b0; margin-bottom: 10px;">💊 Suitable For</h4>
+                        <p>Chronic pain, digestive issues, insomnia, emotional imbalance, and internal organ dysfunction.</p>
+                    </div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #e8f5e8 0%, #f1f8f1 100%); padding: 25px; border-radius: 12px; border-left: 5px solid #4caf50;">
+                    <h3 style="color: #2e7d32; margin-top: 0;">🇯🇵 Japanese Shiatsu</h3>
+                    <div style="margin: 15px 0;">
+                        <h4 style="color: #4caf50; margin-bottom: 10px;">🎯 Core Features</h4>
+                        <p>Finger pressure therapy that applies sustained pressure to specific points to balance the body's energy flow and promote healing.</p>
+                    </div>
+                    <div style="margin: 15px 0;">
+                        <h4 style="color: #4caf50; margin-bottom: 10px;">🤲 Main Techniques</h4>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li>Thumb and finger pressure on meridian points</li>
+                            <li>Palm pressure for broader muscle groups</li>
+                            <li>Gentle stretching and joint rotation</li>
+                            <li>Breathing coordination with pressure application</li>
+                        </ul>
+                    </div>
+                    <div style="margin: 15px 0;">
+                        <h4 style="color: #4caf50; margin-bottom: 10px;">💊 Suitable For</h4>
+                        <p>Stress reduction, headaches, back pain, fatigue, and improving overall energy circulation.</p>
+                    </div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #fff8e1 0%, #fffbf0 100%); padding: 25px; border-radius: 12px; border-left: 5px solid #ffc107;">
+                    <h3 style="color: #f57f17; margin-top: 0;">🇮🇳 Ayurvedic Massage</h3>
+                    <div style="margin: 15px 0;">
+                        <h4 style="color: #ffc107; margin-bottom: 10px;">🎯 Core Features</h4>
+                        <p>Ancient Indian healing system using warm herbal oils and specific techniques based on individual constitution (dosha) assessment.</p>
+                    </div>
+                    <div style="margin: 15px 0;">
+                        <h4 style="color: #ffc107; margin-bottom: 10px;">🤲 Main Techniques</h4>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li>Warm oil application with long strokes</li>
+                            <li>Marma point stimulation (vital energy points)</li>
+                            <li>Synchronized four-hand massage techniques</li>
+                            <li>Constitutional assessment and customized treatment</li>
+                        </ul>
+                    </div>
+                    <div style="margin: 15px 0;">
+                        <h4 style="color: #ffc107; margin-bottom: 10px;">💊 Suitable For</h4>
+                        <p>Detoxification, anti-aging, hormonal balance, skin nourishment, and deep relaxation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #e0f2f1 0%, #f1f8f6 100%); padding: 25px; border-radius: 12px; margin: 25px 0;">
+                <h3 style="color: #00695c; margin-top: 0;">🎯 Choosing the Right Massage for You</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0;">
+                    <div>
+                        <h4 style="color: #00897b; margin-bottom: 10px;">🏃‍♂️ For Athletic Recovery</h4>
+                        <p>Recommended: Thai Massage, Balinese Massage</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #00897b; margin-bottom: 10px;">😰 For Stress Relief</h4>
+                        <p>Recommended: Japanese Shiatsu, Ayurvedic Massage</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #00897b; margin-bottom: 10px;">🤕 For Pain Management</h4>
+                        <p>Recommended: Chinese Tuina, Hilot Massage</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #00897b; margin-bottom: 10px;">🌸 For Beauty & Wellness</h4>
+                        <p>Recommended: Ayurvedic, Balinese Massage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Common Body Pain Issues and Massage Solutions</h2>
+            <p>Modern lifestyle often leads to various physical discomforts. Understanding these common pain issues and their massage solutions can help you make informed decisions about your wellness journey.</p>
+            
+            <h3 style="color: #2c5530; margin-top: 40px; margin-bottom: 20px;">🔴 Upper Body Pain Issues</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 25px 0;">
+                <div style="background: #fff5f5; padding: 20px; border-radius: 10px; border-left: 4px solid #e53e3e;">
+                    <h4 style="color: #c53030; margin-top: 0;">📱 Neck Pain (Cervical Syndrome)</h4>
+                    <p><strong>Common Causes:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Poor posture from phone/computer use</li>
+                        <li>Sleeping in wrong position</li>
+                        <li>Stress and muscle tension</li>
+                        <li>Cervical spine degeneration</li>
+                    </ul>
+                    <p><strong>Symptoms:</strong> Neck stiffness, headaches, shoulder pain, limited range of motion</p>
+                    <p><strong>Massage Solutions:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Deep tissue massage for neck muscles</li>
+                        <li>Trigger point therapy</li>
+                        <li>Cervical spine mobilization</li>
+                        <li>Acupoint massage (Fengchi, Jianjing)</li>
+                    </ul>
+                    <p><strong>Prevention:</strong> Maintain proper posture, take regular breaks, use ergonomic pillows</p>
+                </div>
+
+                <div style="background: #f0fff4; padding: 20px; border-radius: 10px; border-left: 4px solid #38a169;">
+                    <h4 style="color: #2f855a; margin-top: 0;">💼 Shoulder Stiffness (Frozen Shoulder)</h4>
+                    <p><strong>Common Causes:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Repetitive overhead movements</li>
+                        <li>Poor shoulder posture</li>
+                        <li>Age-related joint changes</li>
+                        <li>Lack of shoulder mobility exercises</li>
+                    </ul>
+                    <p><strong>Massage Solutions:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Shoulder joint mobilization</li>
+                        <li>Rotator cuff muscle massage</li>
+                        <li>Passive range of motion therapy</li>
+                    </ul>
+                </div>
+
+                <div style="background: #f7fafc; padding: 20px; border-radius: 10px; border-left: 4px solid #4299e1;">
+                    <h4 style="color: #3182ce; margin-top: 0;">💻 Upper Back Pain</h4>
+                    <p><strong>Common Causes:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Hunched posture, rounded shoulders</li>
+                        <li>Tight chest muscles, weak back muscles</li>
+                        <li>Prolonged computer use</li>
+                        <li>Heavy backpack carrying</li>
+                    </ul>
+                    <p><strong>Massage Solutions:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Thoracic spine adjustment massage</li>
+                        <li>Rhomboid and trapezius muscle release</li>
+                        <li>Chest muscle stretching with massage</li>
+                    </ul>
+                </div>
+
+                <div style="background: #f5f0ff; padding: 20px; border-radius: 10px; border-left: 4px solid #9b59b6;">
+                    <h4 style="color: #8e44ad; margin-top: 0;">✋ Arm Pain (Tennis Elbow/Mouse Hand)</h4>
+                    <p><strong>Common Causes:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Repetitive hand movements</li>
+                        <li>Prolonged mouse and keyboard use</li>
+                        <li>Improper wrist positioning</li>
+                        <li>Overuse of forearm muscles</li>
+                    </ul>
+                    <p><strong>Massage Solutions:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Deep tissue massage of forearm muscles</li>
+                        <li>Acupoint pressure on Shousanli, Quchi</li>
+                        <li>Wrist joint mobilization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #2c5530; margin-top: 40px; margin-bottom: 20px;">🟢 Lower Body Pain Issues</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 25px 0;">
+                <div style="background: #f0fff0; padding: 20px; border-radius: 10px; border-left: 4px solid #27ae60;">
+                    <h4 style="color: #229954; margin-top: 0;">🏢 Lower Back Pain (Disc Herniation)</h4>
+                    <p><strong>Common Causes:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Prolonged sitting, insufficient lumbar support</li>
+                        <li>Improper lifting techniques</li>
+                        <li>Lumbar muscle fatigue</li>
+                        <li>Spinal degeneration, disc problems</li>
+                        <li>Weak core muscles</li>
+                    </ul>
+                    <p><strong>Symptoms:</strong> Lower back pain, leg numbness, limited mobility</p>
+                    <p><strong>Massage Solutions:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Deep tissue massage of lumbar region</li>
+                        <li>Acupoint therapy on Shenshu, Yaoyangguan</li>
+                        <li>Pelvic adjustment massage</li>
+                        <li>Heat therapy combined with tuina</li>
+                    </ul>
+                    <p><strong>Prevention:</strong> Strengthen core muscles, maintain proper posture, regular movement</p>
+                </div>
+
+                <div style="background: #f0f8ff; padding: 20px; border-radius: 10px; border-left: 4px solid #3498db;">
+                    <h4 style="color: #2980b9; margin-top: 0;">🦵 Leg Fatigue (Varicose Veins)</h4>
+                    <p><strong>Common Causes:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Prolonged standing at work</li>
+                        <li>Poor blood circulation</li>
+                        <li>Lack of exercise, muscle weakness</li>
+                        <li>Edema, lymphatic blockage</li>
+                        <li>Venous valve dysfunction</li>
+                    </ul>
+                    <p><strong>Symptoms:</strong> Heavy legs, swelling, visible veins</p>
+                    <p><strong>Massage Solutions:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Lymphatic drainage massage for legs</li>
+                        <li>Deep relaxation of calf muscles</li>
+                        <li>Acupoint pressure on Zusanli, Chengshan</li>
+                        <li>Leg elevation combined with massage</li>
+                    </ul>
+                    <p><strong>Prevention:</strong> Avoid prolonged standing, wear compression socks, regular leg elevation</p>
+                </div>
+
+                <div style="background: #fff0f5; padding: 20px; border-radius: 10px; border-left: 4px solid #e91e63;">
+                    <h4 style="color: #c2185b; margin-top: 0;">🦶 Plantar Fasciitis</h4>
+                    <p><strong>Common Causes:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Prolonged standing or walking</li>
+                        <li>Insufficient arch support</li>
+                        <li>Inappropriate footwear</li>
+                        <li>Tight calf muscles</li>
+                    </ul>
+                    <p><strong>Massage Solutions:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Plantar fascia release massage</li>
+                        <li>Calf muscle stretching and massage</li>
+                        <li>Foot reflexology treatment</li>
+                    </ul>
+                </div>
+
+                <div style="background: #fef5e7; padding: 20px; border-radius: 10px; border-left: 4px solid #f39c12;">
+                    <h4 style="color: #d68910; margin-top: 0;">🍑 Hip Pain (Piriformis Syndrome)</h4>
+                    <p><strong>Common Causes:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Prolonged sitting</li>
+                        <li>Hip muscle imbalance</li>
+                        <li>Sciatic nerve compression</li>
+                        <li>Sports-related hip injuries</li>
+                    </ul>
+                    <p><strong>Massage Solutions:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Piriformis muscle release</li>
+                        <li>Hip flexor stretching massage</li>
+                        <li>Sciatic nerve mobilization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #2c5530; margin-top: 40px; margin-bottom: 20px;">🧠 Stress-Related Pain Issues</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 25px 0;">
+                <div style="background: #fdf2f8; padding: 20px; border-radius: 10px; border-left: 4px solid #ec4899;">
+                    <h4 style="color: #be185d; margin-top: 0;">🤕 Tension Headaches</h4>
+                    <p><strong>Common Causes:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Chronic stress and anxiety</li>
+                        <li>Neck and shoulder muscle tension</li>
+                        <li>Poor sleep quality</li>
+                        <li>Eye strain from screen time</li>
+                    </ul>
+                    <p><strong>Massage Solutions:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Scalp and temple massage</li>
+                        <li>Neck and shoulder tension release</li>
+                        <li>Acupoint therapy on Yintang, Taiyang</li>
+                    </ul>
+                </div>
+
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 10px; border-left: 4px solid #22c55e;">
+                    <h4 style="color: #16a34a; margin-top: 0;">😰 General Muscle Tension</h4>
+                    <p><strong>Common Causes:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Chronic stress and emotional tension</li>
+                        <li>Lack of physical activity</li>
+                        <li>Poor breathing patterns</li>
+                        <li>Mental fatigue and overwhelm</li>
+                    </ul>
+                    <p><strong>Massage Solutions:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Full-body relaxation massage</li>
+                        <li>Breathing coordination therapy</li>
+                        <li>Stress-relief acupoint massage</li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8fafc; padding: 20px; border-radius: 10px; border-left: 4px solid #64748b;">
+                    <h4 style="color: #475569; margin-top: 0;">😴 Sleep-Related Pain</h4>
+                    <p><strong>Common Causes:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Poor sleep posture</li>
+                        <li>Inadequate mattress support</li>
+                        <li>Sleep disorders and insomnia</li>
+                        <li>Stress-induced muscle tension</li>
+                    </ul>
+                    <p><strong>Massage Solutions:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Evening relaxation massage</li>
+                        <li>Sleep-promoting acupoint therapy</li>
+                        <li>Gentle stretching and mobility work</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%); padding: 25px; border-radius: 12px; margin: 30px 0;">
+                <h3 style="color: #2c5530; margin-top: 0;">💡 Professional Massage Recommendations</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+                    <div>
+                        <h4 style="color: #4a7c59; margin-bottom: 10px;">⏰ Optimal Frequency</h4>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li>Acute pain: 2-3 times per week</li>
+                            <li>Chronic conditions: 1-2 times per week</li>
+                            <li>Maintenance: 1-2 times per month</li>
+                            <li>Prevention: Monthly sessions</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #4a7c59; margin-bottom: 10px;">🕐 Best Timing</h4>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li>Morning: Energizing and mobility massage</li>
+                            <li>Afternoon: Stress relief and tension release</li>
+                            <li>Evening: Relaxation and sleep preparation</li>
+                            <li>Post-workout: Recovery and muscle care</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #4a7c59; margin-bottom: 10px;">⚠️ Important Notes</h4>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li>Avoid deep massage during acute inflammation</li>
+                            <li>Drink plenty of water after massage</li>
+                            <li>Consult healthcare providers for chronic conditions</li>
+                            <li>Communicate with therapist about pressure preferences</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Massage and Wellness Integration: Comprehensive Life Quality Enhancement</h2>
+            <p>Massage is not just physical relaxation; it's an effective pathway to combine with other wellness practices for comprehensive body-mind-soul enhancement. Modern wellness science emphasizes holistic health management, with massage serving as a crucial component that forms a complete wellness system alongside Traditional Chinese Medicine, yoga practice, and beauty care.</p>
+            
+            <div style="background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%); padding: 30px; border-radius: 15px; margin: 25px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <h3 style="color: #2c5530; margin-top: 0; font-size: 24px;">🌿 Massage and Traditional Chinese Medicine Wellness</h3>
+                <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">TCM wellness theory emphasizes "harmony between human and nature," stressing the importance of following natural laws and seasonal body cultivation. Massage, as an important component of TCM external therapy, can select corresponding acupoints and techniques based on different seasonal characteristics to achieve optimal wellness effects.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0;">
+                    <div style="background: rgba(255,255,255,0.7); padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #27ae60; margin-top: 0;">🌸 Spring Liver Care (Mar-May)</h4>
+                        <p><strong>Key Acupoints:</strong> Taichong, Qimen, Ganshu</p>
+                        <p><strong>Massage Techniques:</strong> Gentle tuina, liver qi regulation</p>
+                        <p><strong>Wellness Goals:</strong> Liver meridian circulation, emotional regulation, metabolism boost</p>
+                        <p><strong>Optimal Time:</strong> 7-9 AM, liver meridian peak time</p>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.7); padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #e74c3c; margin-top: 0;">☀️ Summer Heart Care (Jun-Aug)</h4>
+                        <p><strong>Key Acupoints:</strong> Shenmen, Neiguan, Xinshu</p>
+                        <p><strong>Massage Techniques:</strong> Light tapping, heart calming</p>
+                        <p><strong>Wellness Goals:</strong> Heart nourishment, heat clearing, blood pressure regulation</p>
+                        <p><strong>Optimal Time:</strong> 11 AM-1 PM, heart meridian peak time</p>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.7); padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #f39c12; margin-top: 0;">🍂 Autumn Lung Care (Sep-Nov)</h4>
+                        <p><strong>Key Acupoints:</strong> Taiyuan, Yuji, Feishu</p>
+                        <p><strong>Massage Techniques:</strong> Deep pressure, lung moistening</p>
+                        <p><strong>Wellness Goals:</strong> Lung nourishment, immunity boost, cold prevention</p>
+                        <p><strong>Optimal Time:</strong> 3-5 AM, lung meridian peak time</p>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.7); padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #3498db; margin-top: 0;">❄️ Winter Kidney Care (Dec-Feb)</h4>
+                        <p><strong>Key Acupoints:</strong> Yongquan, Shenshu, Guanyuan</p>
+                        <p><strong>Massage Techniques:</strong> Warm tuina, kidney yang support</p>
+                        <p><strong>Wellness Goals:</strong> Kidney warming, essence strengthening, vitality enhancement</p>
+                        <p><strong>Optimal Time:</strong> 5-7 PM, kidney meridian peak time</p>
+                    </div>
+                </div>
+                
+                <div style="background: rgba(44,85,48,0.1); padding: 15px; border-radius: 8px; margin-top: 20px;">
+                    <h4 style="color: #2c5530; margin-top: 0;">📋 TCM Massage Wellness Principles</h4>
+                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
+                        <li><strong>Syndrome Differentiation:</strong> Choose suitable massage methods based on individual constitution</li>
+                        <li><strong>Meridian Regulation:</strong> Clear the twelve meridians, harmonize qi and blood circulation</li>
+                        <li><strong>Yin-Yang Balance:</strong> Regulate body's yin-yang, maintain internal harmony</li>
+                        <li><strong>Prevention First:</strong> Prevent disease before onset, prevent progression when ill</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #e3f2fd 0%, #f1f8ff 100%); padding: 30px; border-radius: 15px; margin: 25px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <h3 style="color: #1976d2; margin-top: 0; font-size: 24px;">🧘‍♀️ Massage and Yoga</h3>
+                <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">Yoga and massage are both wellness practices rooted in ancient Eastern wisdom. Their combination can produce synergistic effects greater than the sum of their parts. Yoga enhances body flexibility and balance through asanas, while massage further relaxes deep muscles and deepens stretching effects, achieving comprehensive body-mind-soul enhancement.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+                    <div style="background: rgba(255,255,255,0.8); padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #1976d2; margin-top: 0;">🔄 Optimal Combination Sequence</h4>
+                        <p><strong>Pre-Yoga Massage (10-15 minutes):</strong></p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>Gentle full-body warm-up massage</li>
+                            <li>Focus on releasing tight muscle groups</li>
+                            <li>Improve joint mobility</li>
+                            <li>Prevent exercise injuries</li>
+                        </ul>
+                        
+                        <p><strong>Post-Yoga Massage (20-30 minutes):</strong></p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>Deep muscle relaxation</li>
+                            <li>Promote lactic acid metabolism</li>
+                            <li>Extend stretching effects</li>
+                            <li>Enhance recovery benefits</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.8); padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #1976d2; margin-top: 0;">🎯 Targeted Combinations</h4>
+                        <p><strong>Spinal Health Combination:</strong></p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>Cat-Cow yoga + Spinal massage</li>
+                            <li>Twisting poses + Lumbar tuina</li>
+                            <li>Backbends + Thoracic adjustment</li>
+                        </ul>
+                        
+                        <p><strong>Stress Release Combination:</strong></p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>Meditation yoga + Head massage</li>
+                            <li>Yin yoga + Lymphatic drainage</li>
+                            <li>Breathing exercises + Chest massage</li>
+                        </ul>
+                        
+                        <p><strong>Flexibility Enhancement Combination:</strong></p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>Forward folds + Hamstring massage</li>
+                            <li>Hip openers + Hip joint massage</li>
+                            <li>Shoulder stretches + Neck-shoulder massage</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="background: rgba(25,118,210,0.1); padding: 15px; border-radius: 8px; margin-top: 20px;">
+                    <h4 style="color: #1976d2; margin-top: 0;">💡 Professional Recommendations</h4>
+                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
+                        <li><strong>Frequency Schedule:</strong> 2-3 times weekly yoga+massage combination for optimal results</li>
+                        <li><strong>Intensity Control:</strong> Massage pressure should match yoga intensity, avoid overstimulation</li>
+                        <li><strong>Breathing Coordination:</strong> Maintain deep breathing during massage to enhance relaxation</li>
+                        <li><strong>Personal Adaptation:</strong> Adjust combination content based on individual physical condition</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #fce4ec 0%, #fff0f3 100%); padding: 30px; border-radius: 15px; margin: 25px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <h3 style="color: #c2185b; margin-top: 0; font-size: 24px;">💆‍♀️ Massage and Beauty</h3>
+                <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">Beauty massage is a natural, side-effect-free beauty method that stimulates facial and body acupoints and meridians to promote blood circulation and lymphatic detoxification, fundamentally improving skin condition. Compared to chemical beauty products, beauty massage focuses more on internal regulation, achieving beautiful results from the inside out.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 20px 0;">
+                    <div style="background: rgba(255,255,255,0.8); padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #c2185b; margin-top: 0;">🌸 Facial Beauty Massage</h4>
+                        <p><strong>Main Benefits:</strong></p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>Promote facial circulation, improve dull complexion</li>
+                            <li>Stimulate collagen production, enhance skin elasticity</li>
+                            <li>Reduce fine lines and wrinkles, delay aging</li>
+                            <li>Improve eye puffiness and dark circles</li>
+                            <li>Tighten facial contours, enhance facial lines</li>
+                        </ul>
+                        
+                        <p><strong>Key Acupoints:</strong></p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li><strong>Yintang:</strong> Improve forehead wrinkles</li>
+                            <li><strong>Taiyang:</strong> Relieve eye fatigue</li>
+                            <li><strong>Yingxiang:</strong> Improve nasal area dullness</li>
+                            <li><strong>Dicang:</strong> Lift mouth corners, improve nasolabial folds</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.8); padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #c2185b; margin-top: 0;">💎 Body Beauty Massage</h4>
+                        <p><strong>Full-Body Beauty Effects:</strong></p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>Promote systemic circulation, improve complexion</li>
+                            <li>Accelerate metabolism, eliminate toxins</li>
+                            <li>Improve cellulite, tighten skin</li>
+                            <li>Regulate endocrine system, improve skin issues</li>
+                            <li>Reduce stress, improve sleep quality</li>
+                        </ul>
+                        
+                        <p><strong>Special Techniques:</strong></p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li><strong>Lymphatic Drainage:</strong> Eliminate edema, detox beauty</li>
+                            <li><strong>Essential Oil Massage:</strong> Nourish skin, aromatherapy</li>
+                            <li><strong>Gua Sha Beauty:</strong> Promote microcirculation, improve skin texture</li>
+                            <li><strong>Cupping Beauty:</strong> Deep detox, skin tightening</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.8); padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #c2185b; margin-top: 0;">⏰ Beauty Massage Schedule</h4>
+                        <p><strong>Daily Maintenance:</strong></p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>Morning: 5-minute facial lifting massage</li>
+                            <li>Evening: 10-minute deep cleansing massage</li>
+                            <li>Bedtime: Neck lymphatic drainage massage</li>
+                        </ul>
+                        
+                        <p><strong>Weekly Deep Care:</strong></p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>Facial: 30-minute professional facial massage</li>
+                            <li>Body: 60-minute full-body lymphatic massage</li>
+                            <li>Targeted areas: Problem-specific massage</li>
+                        </ul>
+                        
+                        <p><strong>Monthly Intensive Repair:</strong></p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>90-minute comprehensive beauty massage treatment</li>
+                            <li>Combined with masks, essential oils, and other care products</li>
+                            <li>Professional beautician guidance and assessment</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="background: rgba(194,24,91,0.1); padding: 15px; border-radius: 8px; margin-top: 20px;">
+                    <h4 style="color: #c2185b; margin-top: 0;">🎯 Beauty Massage Precautions</h4>
+                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
+                        <li><strong>Gentle Technique:</strong> Facial skin is thin, massage pressure should be gentle and moderate</li>
+                        <li><strong>Correct Direction:</strong> Massage direction should follow muscle texture and lymphatic flow</li>
+                        <li><strong>Product Selection:</strong> Use massage oils or lotions suitable for your skin type</li>
+                        <li><strong>Hygiene:</strong> Thoroughly clean hands and face before and after massage</li>
+                        <li><strong>Consistency:</strong> Beauty massage requires long-term persistence to see significant results</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Conclusion</h2>
+            <p>Massage is not just a physical pleasure; it's an investment in physical and mental health. Through this blog's introduction, we hope to give you a deeper understanding of massage cultures from around the world and help you find the most suitable massage experience in Hong Kong. Whether you're seeking deep relaxation, pain relief, or simply want to recharge yourself, Hong Kong's rich massage options can meet your needs.</p>
+        </div>
+
+        </div> <!-- End English Content -->
 
         <div class="footer">
-            <p>&copy; 2025 香港養生按摩全攻略 | 專業按摩資訊平台</p>
+            <div class="content-zh active">
+                <p>&copy; 2025 香港養生按摩全攻略 | 專業按摩資訊平台</p>
+            </div>
+            <div class="content-en">
+                <p>&copy; 2025 Hong Kong Wellness Massage Guide | Professional Massage Information Platform</p>
+            </div>
         </div>
     </div>
-</body>
-</html>
+
+    <script>
+        function switchLanguage(lang) {
+            // Hide all content
+            const zhContent = document.querySelectorAll('.content-zh');
+            const enContent = document.querySelectorAll('.content-en');
+            const langButtons = document.querySelectorAll('.lang-btn');
+            
+            // Remove active class from all elements
+            zhContent.forEach(el => el.classList.remove('active'));
+            enContent.forEach(el => el.classList.remove('active'));
+            langButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected language content
+            if (lang === 'zh') {
+                zhContent.forEach(el => el.classList.add('active'));
+                document.querySelector('.lang-btn[onclick="switchLanguage(\'zh\')"]').classList.add('active');
+                document.documentElement.lang = 'zh-TW';
+                document.title = '探索身心靈的和諧：香港養生按摩全攻略';
+            } else {
+                enContent.forEach(el => el.classList.add('active'));
+                document.querySelector('.lang-btn[onclick="switchLanguage(\'en\')"]').classList.add('active');
+                document.documentElement.lang = 'en';
+                document.title = 'Discover Harmony of Body, Mind & Soul: Hong Kong Wellness Massage Guide';
+            }
+        }
+        
+        // Set default language to Chinese
+        document.addEventListener('DOMContentLoaded', function() {
+            switchLanguage('zh');
+        });
+    </script>
 
