@@ -27,8 +27,7 @@
             margin: 0 auto;
             padding: 20px;
         }
-        
-        .header {
+                .header {
             background: linear-gradient(135deg, #0d2818 0%, #1a4a2e 25%, #2d5a3d 50%, #1e4a32 75%, #2a5f42 100%);
             position: relative;
             overflow: hidden;
@@ -38,6 +37,9 @@
             border-radius: 15px;
             margin-bottom: 30px;
             box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            min-height: 300px;
         }
         
         .header::before {
@@ -54,10 +56,27 @@
             z-index: 1;
         }
         
-        .header::after {
-            content: '';
+        .massage-hero-image {
             position: absolute;
-            top: -50%;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255,255,255,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            z-index: 2;
+            opacity: 0.9;
+        }
+        
+        .header-content {
+            flex: 1;
+            margin-left: 250px;
+            position: relative;
+            z-index: 2;
+        }    top: -50%;
             left: -50%;
             width: 200%;
             height: 200%;
@@ -409,6 +428,23 @@
             
             .header {
                 padding: 45px 15px 35px 15px;
+                flex-direction: column;
+                text-align: center;
+                min-height: auto;
+            }
+            
+            .massage-hero-image {
+                position: relative;
+                left: auto;
+                top: auto;
+                transform: none;
+                width: 150px;
+                height: 150px;
+                margin-bottom: 20px;
+            }
+            
+            .header-content {
+                margin-left: 0;
             }
             
             .language-switcher {
@@ -524,6 +560,8 @@
 <body>
     <div class="container">
         <div class="header">
+            <img src="massage-hero.webp" alt="Professional Massage Therapy" class="massage-hero-image">
+            
             <div class="massage-icons">
                 <div class="massage-icon">🌿</div>
                 <div class="massage-icon">💆‍♀️</div>
