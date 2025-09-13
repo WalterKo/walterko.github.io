@@ -29,14 +29,84 @@
         }
         
         .header {
-            background: linear-gradient(135deg, #1b3d1f 0%, #2d5a32 100%);
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 25%, #2c5364 50%, #1e3c72 75%, #2a5298 100%);
+            position: relative;
+            overflow: hidden;
             color: white;
             text-align: center;
             padding: 50px 20px 40px 20px;
             border-radius: 15px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 219, 226, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 183, 197, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120, 219, 226, 0.05) 0%, transparent 50%);
+            z-index: 1;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat,
+                url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E") repeat;
+            animation: float 20s ease-in-out infinite;
+            z-index: 1;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .header-content {
             position: relative;
+            z-index: 2;
+        }
+        
+        .massage-icons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .massage-icon {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.1;
+            animation: floatIcon 15s ease-in-out infinite;
+        }
+        
+        .massage-icon:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+        .massage-icon:nth-child(2) { top: 25%; right: 15%; animation-delay: 2s; }
+        .massage-icon:nth-child(3) { bottom: 30%; left: 8%; animation-delay: 4s; }
+        .massage-icon:nth-child(4) { bottom: 20%; right: 12%; animation-delay: 6s; }
+        .massage-icon:nth-child(5) { top: 40%; left: 5%; animation-delay: 8s; }
+        .massage-icon:nth-child(6) { top: 60%; right: 8%; animation-delay: 10s; }
+        
+        @keyframes floatIcon {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.1; }
+            25% { transform: translateY(-15px) rotate(90deg); opacity: 0.15; }
+            50% { transform: translateY(-10px) rotate(180deg); opacity: 0.1; }
+            75% { transform: translateY(-20px) rotate(270deg); opacity: 0.05; }
         }
         
         .language-switcher {
@@ -91,11 +161,27 @@
             font-size: 2.5rem;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #ffffff, #e8f4f8, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+            animation: shimmer 3s ease-in-out infinite;
+            position: relative;
+            z-index: 2;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { background-position: -200% center; }
+            50% { background-position: 200% center; }
         }
         
         .header p {
             font-size: 1.1rem;
-            opacity: 0.9;
+            opacity: 0.95;
+            position: relative;
+            z-index: 2;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
         
         .content-section {
@@ -438,19 +524,30 @@
 <body>
     <div class="container">
         <div class="header">
+            <div class="massage-icons">
+                <div class="massage-icon">🌿</div>
+                <div class="massage-icon">💆‍♀️</div>
+                <div class="massage-icon">🧘‍♂️</div>
+                <div class="massage-icon">✨</div>
+                <div class="massage-icon">🌸</div>
+                <div class="massage-icon">💫</div>
+            </div>
+            
             <div class="language-switcher">
                 <button class="lang-btn active" onclick="switchLanguage('zh')">中文</button>
                 <button class="lang-btn" onclick="switchLanguage('en')">English</button>
             </div>
             
-            <div class="content-zh active">
-                <h1>探索身心靈的和諧：香港養生按摩全攻略</h1>
-                <p>專業按摩知識 • 香港按摩店排名 • 身心靈養生指南</p>
-            </div>
-            
-            <div class="content-en">
-                <h1>Discover Harmony of Body, Mind & Soul: Hong Kong Wellness Massage Guide</h1>
-                <p>Professional Massage Knowledge • Hong Kong Massage Shop Rankings • Holistic Wellness Guide</p>
+            <div class="header-content">
+                <div class="content-zh active">
+                    <h1>探索身心靈的和諧：香港養生按摩全攻略</h1>
+                    <p>專業按摩知識 • 香港按摩店排名 • 身心靈養生指南</p>
+                </div>
+                
+                <div class="content-en">
+                    <h1>Discover Harmony of Body, Mind & Soul: Hong Kong Wellness Massage Guide</h1>
+                    <p>Professional Massage Knowledge • Hong Kong Massage Shop Rankings • Holistic Wellness Guide</p>
+                </div>
             </div>
         </div>
 
