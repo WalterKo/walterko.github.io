@@ -166,11 +166,48 @@
         
         .contact-icon {
             width: 20px;
-            height: 20px;
-            margin-right: 10px;
+            margin-right: 8px;
             color: #4a7c59;
         }
         
+        /* 星星評分系統 */
+        .rating-section {
+            margin: 15px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .rating-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .rating-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .rating-label {
+            font-weight: 500;
+            color: #2c5530;
+            font-size: 0.9rem;
+        }
+        
+        .stars {
+            display: flex;
+            gap: 2px;
+        }
+        
+        .star {
+            color: #ffd700;
+            font-size: 16px;
+        }
+        
+        .star.empty {
+            color: #ddd;
+        }        
         .contact-link {
             color: #4a7c59;
             text-decoration: none;
@@ -383,6 +420,40 @@
                     <div class="shop-description">
                         正宗泰式古法按摩，資深泰籍技師，深層舒緩，身心靈平衡。交通便利，環境舒適，是體驗泰式按摩的首選。我們致力於提供最專業、最有效的按摩服務，讓您在繁忙的都市中找到一片屬於自己的身心靈港灣。
                     </div>
+                    
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-label">環境</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">服務</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">價錢</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="contact-info">
                         <div class="contact-item">
                             <span class="contact-icon">📍</span>
@@ -412,6 +483,40 @@
                     <div class="shop-description">
                         提供多種泰式按摩服務，環境舒適，性價比高。專業技師團隊，注重客戶體驗。
                     </div>
+                    
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-label">環境</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">服務</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">價錢</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="contact-info">
                         <div class="contact-item">
                             <span class="contact-icon">📍</span>
@@ -441,6 +546,40 @@
                     <div class="shop-description">
                         專注足部按摩及中式推拿，技師經驗豐富，深受本地人喜愛。傳統手法與現代舒適環境的完美結合。
                     </div>
+                    
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-label">環境</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">服務</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">價錢</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="contact-info">
                         <div class="contact-item">
                             <span class="contact-icon">📍</span>
@@ -464,6 +603,40 @@
                     <div class="shop-description">
                         高端水療中心，提供多元化按摩及美容服務，環境優雅，適合追求奢華體驗的顧客。
                     </div>
+                    
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-label">環境</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">服務</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">價錢</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="contact-info">
                         <div class="contact-item">
                             <span class="contact-icon">📍</span>
@@ -487,6 +660,40 @@
                     <div class="shop-description">
                         傳統中式足部及全身按摩，注重穴位和經絡，有助於緩解疲勞。多年經營，口碑良好。
                     </div>
+                    
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-label">環境</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">服務</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">價錢</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="contact-info">
                         <div class="contact-item">
                             <span class="contact-icon">📍</span>
@@ -512,6 +719,40 @@
                     <div class="shop-description">
                         觀塘區熱門按摩店，提供中式傳統按摩，技師專業，口碑良好。地理位置便利，服務貼心。
                     </div>
+                    
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-label">環境</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">服務</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">價錢</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="contact-info">
                         <div class="contact-item">
                             <span class="contact-icon">📍</span>
@@ -535,6 +776,40 @@
                     <div class="shop-description">
                         提供泰式、瑞典式等多種按摩，環境寧靜舒適，服務貼心。位於尖沙咀心臟地帶，交通便利。
                     </div>
+                    
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-label">環境</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">服務</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">價錢</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="contact-info">
                         <div class="contact-item">
                             <span class="contact-icon">📍</span>
@@ -558,6 +833,40 @@
                     <div class="shop-description">
                         另一家受歡迎的泰式按摩店，提供正宗泰式古法按摩，注重細節，技師手法純熟。
                     </div>
+                    
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-label">環境</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">服務</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <span class="rating-label">價錢</span>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="contact-info">
                         <div class="contact-item">
                             <span class="contact-icon">📍</span>
