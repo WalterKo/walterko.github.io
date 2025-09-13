@@ -85,6 +85,7 @@
         /* 專業按摩店排名卡片設計 */
         .ranking-container {
             display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
             margin: 30px 0;
         }
@@ -241,6 +242,10 @@
             
             h2 {
                 font-size: 1.5rem;
+            }
+            
+            .ranking-container {
+                grid-template-columns: 1fr;
             }
             
             .massage-shop-card {
@@ -618,31 +623,214 @@
 
         <div class="content-section">
             <h2>常見身體疼痛問題與按摩解決方案</h2>
-            <p>現代人因為工作壓力、生活習慣等因素，經常面臨各種身體疼痛問題。以下是一些常見的疼痛類型及其按摩解決方案：</p>
+            <p>現代人因為工作壓力、生活習慣等因素，經常面臨各種身體疼痛問題。以下是詳細的疼痛類型分析及其專業按摩解決方案，幫助您找到最適合的治療方式：</p>
             
+            <h3 style="color: #2c5530; margin-top: 30px; margin-bottom: 20px;">🔴 上半身疼痛問題</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 25px 0;">
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid #e74c3c;">
-                    <h3 style="color: #c0392b; margin-top: 0;">🔴 頸部疼痛</h3>
-                    <p><strong>常見原因：</strong>長時間低頭使用手機、電腦工作姿勢不良、睡眠姿勢不當</p>
-                    <p><strong>按摩建議：</strong>頸部穴位按摩、肩頸放鬆手法、熱敷配合按摩</p>
+                <div style="background: #fff5f5; padding: 20px; border-radius: 10px; border-left: 4px solid #e74c3c;">
+                    <h4 style="color: #c0392b; margin-top: 0;">📱 頸部疼痛 (頸椎症候群)</h4>
+                    <p><strong>常見原因：</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>長時間低頭使用手機 (手機頸)</li>
+                        <li>電腦工作姿勢不良</li>
+                        <li>睡眠姿勢不當或枕頭不合適</li>
+                        <li>頸部肌肉緊張、落枕</li>
+                        <li>壓力導致的肌肉僵硬</li>
+                    </ul>
+                    <p><strong>症狀表現：</strong>頸部僵硬、轉動困難、頭痛、肩膀痠痛</p>
+                    <p><strong>按摩解決方案：</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>頸部深層組織按摩</li>
+                        <li>風池、風府等穴位按壓</li>
+                        <li>頸椎牽引配合按摩</li>
+                        <li>熱敷後進行溫和伸展</li>
+                    </ul>
+                    <p><strong>預防措施：</strong>定期活動頸部、調整工作姿勢、選擇合適枕頭</p>
                 </div>
                 
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid #f39c12;">
-                    <h3 style="color: #d68910; margin-top: 0;">🟡 肩膀僵硬</h3>
-                    <p><strong>常見原因：</strong>壓力大、長期伏案工作、缺乏運動、情緒緊張</p>
-                    <p><strong>按摩建議：</strong>深層組織按摩、肩胛骨周圍按摩、伸展配合按摩</p>
+                <div style="background: #fff8f0; padding: 20px; border-radius: 10px; border-left: 4px solid #f39c12;">
+                    <h4 style="color: #d68910; margin-top: 0;">💼 肩膀僵硬 (肩周炎)</h4>
+                    <p><strong>常見原因：</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>長期伏案工作、肩膀前傾</li>
+                        <li>提重物姿勢不當</li>
+                        <li>情緒壓力導致肌肉緊張</li>
+                        <li>缺乏運動、肌肉退化</li>
+                        <li>五十肩 (冰凍肩)</li>
+                    </ul>
+                    <p><strong>症狀表現：</strong>肩膀僵硬、活動受限、夜間疼痛加劇</p>
+                    <p><strong>按摩解決方案：</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>肩胛骨周圍深層按摩</li>
+                        <li>肩井、肩髃穴位治療</li>
+                        <li>關節活動度訓練</li>
+                        <li>熱石按摩放鬆肌肉</li>
+                    </ul>
+                    <p><strong>預防措施：</strong>定期肩膀運動、避免長時間固定姿勢</p>
                 </div>
-                
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid #27ae60;">
-                    <h3 style="color: #229954; margin-top: 0;">🟢 腰背疼痛</h3>
-                    <p><strong>常見原因：</strong>久坐不動、搬重物姿勢不當、肌肉疲勞、脊椎問題</p>
-                    <p><strong>按摩建議：</strong>腰部深層按摩、脊椎兩側按摩、熱石按摩</p>
+
+                <div style="background: #f0f8ff; padding: 20px; border-radius: 10px; border-left: 4px solid #3498db;">
+                    <h4 style="color: #2980b9; margin-top: 0;">💻 上背部疼痛</h4>
+                    <p><strong>常見原因：</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>駝背、圓肩姿勢</li>
+                        <li>胸肌過緊、背肌無力</li>
+                        <li>長時間使用電腦</li>
+                        <li>背包過重</li>
+                    </ul>
+                    <p><strong>按摩解決方案：</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>胸椎調整按摩</li>
+                        <li>菱形肌、斜方肌放鬆</li>
+                        <li>胸肌伸展配合按摩</li>
+                    </ul>
                 </div>
-                
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid #3498db;">
-                    <h3 style="color: #2980b9; margin-top: 0;">🔵 腿部疲勞</h3>
-                    <p><strong>常見原因：</strong>長時間站立、運動過度、血液循環不良、水腫</p>
-                    <p><strong>按摩建議：</strong>腿部淋巴引流、足底反射區按摩、小腿肌肉放鬆</p>
+
+                <div style="background: #f5f0ff; padding: 20px; border-radius: 10px; border-left: 4px solid #9b59b6;">
+                    <h4 style="color: #8e44ad; margin-top: 0;">✋ 手臂疼痛 (網球肘/滑鼠手)</h4>
+                    <p><strong>常見原因：</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>重複性手部動作</li>
+                        <li>長時間使用滑鼠鍵盤</li>
+                        <li>手腕姿勢不當</li>
+                        <li>前臂肌肉過度使用</li>
+                    </ul>
+                    <p><strong>按摩解決方案：</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>前臂肌群深層按摩</li>
+                        <li>手三里、曲池穴位按壓</li>
+                        <li>手腕關節活動</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #2c5530; margin-top: 40px; margin-bottom: 20px;">🟢 下半身疼痛問題</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 25px 0;">
+                <div style="background: #f0fff0; padding: 20px; border-radius: 10px; border-left: 4px solid #27ae60;">
+                    <h4 style="color: #229954; margin-top: 0;">🏢 腰背疼痛 (腰椎間盤突出)</h4>
+                    <p><strong>常見原因：</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>久坐不動、腰部支撐不足</li>
+                        <li>搬重物姿勢不當</li>
+                        <li>腰部肌肉疲勞</li>
+                        <li>脊椎退化、椎間盤問題</li>
+                        <li>核心肌群無力</li>
+                    </ul>
+                    <p><strong>症狀表現：</strong>腰部疼痛、下肢麻木、活動受限</p>
+                    <p><strong>按摩解決方案：</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>腰部深層組織按摩</li>
+                        <li>腎俞、腰陽關穴位治療</li>
+                        <li>骨盆調整按摩</li>
+                        <li>熱敷配合推拿</li>
+                    </ul>
+                    <p><strong>預防措施：</strong>加強核心訓練、正確坐姿、定期起身活動</p>
+                </div>
+
+                <div style="background: #f0f8ff; padding: 20px; border-radius: 10px; border-left: 4px solid #3498db;">
+                    <h4 style="color: #2980b9; margin-top: 0;">🦵 腿部疲勞 (靜脈曲張)</h4>
+                    <p><strong>常見原因：</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>長時間站立工作</li>
+                        <li>血液循環不良</li>
+                        <li>缺乏運動、肌肉無力</li>
+                        <li>水腫、淋巴阻塞</li>
+                        <li>靜脈瓣膜功能不全</li>
+                    </ul>
+                    <p><strong>症狀表現：</strong>腿部沉重、腫脹、靜脈突出</p>
+                    <p><strong>按摩解決方案：</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>腿部淋巴引流按摩</li>
+                        <li>小腿肌肉深層放鬆</li>
+                        <li>足三里、承山穴位按壓</li>
+                        <li>抬腿配合按摩</li>
+                    </ul>
+                    <p><strong>預防措施：</strong>避免久站、穿彈性襪、定期抬腿</p>
+                </div>
+
+                <div style="background: #fff0f5; padding: 20px; border-radius: 10px; border-left: 4px solid #e91e63;">
+                    <h4 style="color: #c2185b; margin-top: 0;">🦶 足底筋膜炎</h4>
+                    <p><strong>常見原因：</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>長時間站立或行走</li>
+                        <li>足弓支撐不足</li>
+                        <li>鞋子不合適</li>
+                        <li>小腿肌肉過緊</li>
+                    </ul>
+                    <p><strong>按摩解決方案：</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>足底深層按摩</li>
+                        <li>小腿後側肌群放鬆</li>
+                        <li>足部反射區治療</li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8f0ff; padding: 20px; border-radius: 10px; border-left: 4px solid #673ab7;">
+                    <h4 style="color: #512da8; margin-top: 0;">🍑 臀部疼痛 (梨狀肌症候群)</h4>
+                    <p><strong>常見原因：</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>久坐導致臀肌無力</li>
+                        <li>梨狀肌過度緊張</li>
+                        <li>坐骨神經受壓</li>
+                        <li>骨盆不正</li>
+                    </ul>
+                    <p><strong>按摩解決方案：</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>臀部深層組織按摩</li>
+                        <li>梨狀肌特定放鬆技術</li>
+                        <li>環跳、承扶穴位治療</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #2c5530; margin-top: 40px; margin-bottom: 20px;">🧠 壓力相關疼痛</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 25px 0;">
+                <div style="background: #fff8e1; padding: 20px; border-radius: 10px; border-left: 4px solid #ff9800;">
+                    <h4 style="color: #f57c00; margin-top: 0;">🤕 緊張性頭痛</h4>
+                    <p><strong>常見原因：</strong>壓力大、睡眠不足、眼睛疲勞、頸肩緊張</p>
+                    <p><strong>按摩解決方案：</strong>頭部穴位按摩、太陽穴按壓、頸肩放鬆</p>
+                </div>
+
+                <div style="background: #e8f5e8; padding: 20px; border-radius: 10px; border-left: 4px solid #4caf50;">
+                    <h4 style="color: #388e3c; margin-top: 0;">😰 全身肌肉緊張</h4>
+                    <p><strong>常見原因：</strong>慢性壓力、焦慮、情緒緊張、自律神經失調</p>
+                    <p><strong>按摩解決方案：</strong>全身放鬆按摩、芳療按摩、深呼吸配合按摩</p>
+                </div>
+
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 4px solid #2196f3;">
+                    <h4 style="color: #1976d2; margin-top: 0;">😴 失眠相關疼痛</h4>
+                    <p><strong>常見原因：</strong>睡眠品質差、肌肉無法充分恢復、疲勞累積</p>
+                    <p><strong>按摩解決方案：</strong>舒緩按摩、神門穴按壓、睡前放鬆按摩</p>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%); padding: 25px; border-radius: 12px; margin: 30px 0; border-left: 5px solid #2c5530;">
+                <h3 style="color: #2c5530; margin-top: 0;">💡 專業按摩建議</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                    <div>
+                        <h4 style="color: #4a7c59; margin-bottom: 10px;">🕐 按摩頻率</h4>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li><strong>急性疼痛：</strong>每週 2-3 次</li>
+                            <li><strong>慢性疼痛：</strong>每週 1-2 次</li>
+                            <li><strong>預防保健：</strong>每月 2-4 次</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #4a7c59; margin-bottom: 10px;">⏰ 最佳時機</h4>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li><strong>工作後：</strong>緩解一天疲勞</li>
+                            <li><strong>運動後：</strong>促進肌肉恢復</li>
+                            <li><strong>睡前：</strong>改善睡眠品質</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #4a7c59; margin-bottom: 10px;">⚠️ 注意事項</h4>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li>急性發炎期避免深層按摩</li>
+                            <li>按摩後多喝水促進代謝</li>
+                            <li>有慢性疾病請先諮詢醫師</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
