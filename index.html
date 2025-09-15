@@ -1139,15 +1139,59 @@
                 <h2 style="color: #2c5530; margin-top: 0; margin-bottom: 15px;">💬 用戶真實評價 & 經驗分享</h2>
                 <p style="color: #666; margin-bottom: 15px;">分享您的按摩體驗，幫助其他人選擇最適合的按摩店</p>
                 <p style="color: #27ae60; font-weight: bold; margin-bottom: 20px;">⭐ 已有用戶分享了真實體驗，歡迎您也來分享意見</p>
+                
+                <!-- 摺疊按鈕 -->
+                <button id="toggleComments" onclick="toggleDiscussion()" style="
+                    background: linear-gradient(135deg, #2c5530 0%, #27ae60 100%);
+                    color: white;
+                    border: none;
+                    padding: 12px 30px;
+                    border-radius: 25px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    box-shadow: 0 4px 15px rgba(44, 85, 48, 0.3);
+                    transition: all 0.3s ease;
+                    margin-top: 10px;
+                " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(44, 85, 48, 0.4)'" 
+                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(44, 85, 48, 0.3)'">
+                    📝 查看用戶評論 & 分享體驗
+                </button>
             </div>
             
-            <!-- Disqus 評論系統 -->
-            <div id="disqus_thread" style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);"></div>
-            <script>
+            <!-- 摺疊的討論區內容 -->
+            <div id="discussionContent" style="display: none; margin-top: 20px;">
+                <!-- Disqus 評論系統 -->
+                <div id="disqus_thread" style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);"></div>
+            </div>
+        </div>
+
+        <script>
+            let discussionLoaded = false;
+            
+            function toggleDiscussion() {
+                const content = document.getElementById('discussionContent');
+                const button = document.getElementById('toggleComments');
+                
+                if (content.style.display === 'none') {
+                    content.style.display = 'block';
+                    button.innerHTML = '🔼 收起評論區';
+                    
+                    // 只在第一次展開時載入Disqus
+                    if (!discussionLoaded) {
+                        loadDisqus();
+                        discussionLoaded = true;
+                    }
+                } else {
+                    content.style.display = 'none';
+                    button.innerHTML = '📝 查看用戶評論 & 分享體驗';
+                }
+            }
+            
+            function loadDisqus() {
                 var disqus_config = function () {
                     this.page.url = 'https://walterko.github.io/';
                     this.page.identifier = 'hk-massage-blog-discussion';
-                    this.language = 'zh_TW';
                 };
                 
                 (function() {
@@ -1156,8 +1200,8 @@
                     s.setAttribute('data-timestamp', +new Date());
                     (d.head || d.body).appendChild(s);
                 })();
-            </script>
-            <noscript>請啟用 JavaScript 來查看 <a href="https://disqus.com/?ref_noscript">Disqus 提供的評論功能</a>。</noscript>
+            }
+        </script>
         </div>
 
 
