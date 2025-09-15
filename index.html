@@ -2218,13 +2218,13 @@
                 </p>
                 
                 <div style="text-align: center;">
-                    <button id="toggleDiscussion" class="discussion-toggle-btn" onclick="toggleDiscussion()">
+                    <button id="toggleDiscussionEn" class="discussion-toggle-btn" onclick="toggleDiscussionEn()">
                         📝 View User Reviews & Share Experience
                     </button>
                 </div>
                 
-                <div id="discussionContent" class="discussion-content" style="display: none;">
-                    <div id="disqus_thread"></div>
+                <div id="discussionContentEn" class="discussion-content" style="display: none;">
+                    <div id="disqus_thread_en"></div>
                 </div>
             </div>
         </div>
@@ -3254,6 +3254,66 @@
                 document.querySelector('.lang-btn[onclick="switchLanguage(\'en\')"]').classList.add('active');
                 document.documentElement.lang = 'en';
                 document.title = 'Discover Harmony of Body, Mind & Soul: Hong Kong Wellness Massage Guide';
+            }
+        }
+        
+        // Chinese discussion toggle function
+        let discussionLoaded = false;
+        function toggleDiscussion() {
+            const content = document.getElementById('discussionContent');
+            const button = document.getElementById('toggleDiscussion');
+            
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                button.textContent = '🔼 收起評論區';
+                
+                // Load Disqus only once
+                if (!discussionLoaded) {
+                    var disqus_config = function () {
+                        this.page.url = window.location.href;
+                        this.page.identifier = 'massage-blog-zh';
+                    };
+                    (function() {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://xiang-gang-an-mo-quan-gong-lue.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                    discussionLoaded = true;
+                }
+            } else {
+                content.style.display = 'none';
+                button.textContent = '📝 查看用戶評論 & 分享體驗';
+            }
+        }
+        
+        // English discussion toggle function
+        let discussionLoadedEn = false;
+        function toggleDiscussionEn() {
+            const content = document.getElementById('discussionContentEn');
+            const button = document.getElementById('toggleDiscussionEn');
+            
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                button.textContent = '🔼 Collapse Discussion';
+                
+                // Load Disqus only once for English
+                if (!discussionLoadedEn) {
+                    var disqus_config = function () {
+                        this.page.url = window.location.href;
+                        this.page.identifier = 'massage-blog-en';
+                    };
+                    (function() {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://xiang-gang-an-mo-quan-gong-lue.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                    discussionLoadedEn = true;
+                }
+            } else {
+                content.style.display = 'none';
+                button.textContent = '📝 View User Reviews & Share Experience';
             }
         }
         
