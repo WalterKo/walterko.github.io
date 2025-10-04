@@ -181,11 +181,20 @@
             box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
 
+        .shop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 15px 0 20px 0;
+            gap: 20px;
+        }
+
         .shop-name {
             font-size: 1.5rem;
             font-weight: bold;
             color: #2c5530;
-            margin: 15px 0 10px 0;
+            margin: 0;
+            flex: 1;
         }
 
         .shop-description {
@@ -195,29 +204,30 @@
         }
 
         .rating-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            min-width: 150px;
+            padding: 10px;
             background: rgba(74, 124, 89, 0.05);
-            border-radius: 10px;
+            border-radius: 8px;
         }
 
         .rating-item {
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .rating-label {
-            display: block;
             font-size: 0.9rem;
             color: #666;
-            margin-bottom: 5px;
+            min-width: 40px;
         }
 
         .stars {
             color: #ffd700;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .contact-info {
@@ -277,9 +287,14 @@
                 padding: 20px;
             }
             
+            .shop-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
             .rating-section {
-                grid-template-columns: 1fr;
-                gap: 10px;
+                min-width: auto;
+                width: 100%;
             }
         }
     </style>
@@ -352,24 +367,25 @@
                 <!-- 第1名 - 特色卡片 -->
                 <div class="massage-shop-card featured">
                     <div class="ranking-badge">🏆 第 1 名</div>
-                    <div class="shop-name">芭堤雅泰式按摩</div>
+                    <div class="shop-header">
+                        <div class="shop-name">芭堤雅泰式按摩</div>
+                        <div class="rating-section">
+                            <div class="rating-item">
+                                <span class="rating-label">環境</span>
+                                <span class="stars">★★★★★</span>
+                            </div>
+                            <div class="rating-item">
+                                <span class="rating-label">服務</span>
+                                <span class="stars">★★★★★</span>
+                            </div>
+                            <div class="rating-item">
+                                <span class="rating-label">價格</span>
+                                <span class="stars">★★★★☆</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="shop-description">
                         <p>正宗泰式古法按摩，資深泰籍技師，深層舒緩身心靈。店內泰國特色裝潢，木雕佛像擺設，恍如置身泰國。交通便利，環境舒適，正宗泰式按摩首選。</p>
-                    </div>
-                    
-                    <div class="rating-section">
-                        <div class="rating-item">
-                            <span class="rating-label">環境</span>
-                            <span class="stars">★★★★★</span>
-                        </div>
-                        <div class="rating-item">
-                            <span class="rating-label">服務</span>
-                            <span class="stars">★★★★★</span>
-                        </div>
-                        <div class="rating-item">
-                            <span class="rating-label">價格</span>
-                            <span class="stars">★★★★★</span>
-                        </div>
                     </div>
                     
                     <div class="contact-info">
